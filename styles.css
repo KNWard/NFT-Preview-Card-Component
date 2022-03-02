@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 15px;
+  background-color: var(--very-dark-blue-main);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--very-dark-blue-card-bg);
+  width: 315px;
+  border-radius: 15px;
+  box-shadow: 5px 15px 12px 15px rgba(7, 15, 24, 0.404);
+}
+
+.image__container {
+  position: relative;
+  padding: 20px 20px 10px 20px;
+}
+
+.image__container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.image__container div {
+  position: absolute;
+  top: 0;
+  background-color: hsl(178, 100%, 50%, 60%);
+  width: 275px;
+  height: 275px;
+  margin-top: 20px;
+  border-radius: 10px;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.image__container div img {
+  position: absolute;
+  width: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image__container div:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.info__container {
+  margin: 10px 25px;
+  line-height: 25px;
+}
+
+.info {
+  text-align: left;
+}
+
+.info h3 {
+  color: var(--white);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.info h3:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.info p {
+  color: var(--soft-blue);
+  font-size: 15px;
+  font-weight: 300;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+}
+
+ul li img {
+  margin-right: 5px;
+}
+
+.ethereum,
+.clock {
+  list-style-type: none;
+}
+
+.ethereum {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.clock {
+  color: var(--soft-blue);
+}
+
+hr {
+  height: 1px;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  border-width: 0;
+  color: var(--very-dark-blue-line);
+  background-color: var(--very-dark-blue-line);
+}
+
+.info__footer {
+  margin-top: 15px;
+  padding-bottom: 25px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: var(--white);
+}
+
+.info__footer img {
+  height: 30px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.info__footer strong {
+  color: var(--soft-blue);
+  font-weight: 400;
+}
+
+span:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.attribution {
+  font-size: 18px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 425px) {
+  .attribution {
+    font-size: 12px;
+  }
+}
